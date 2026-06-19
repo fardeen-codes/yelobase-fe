@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply min-h-screen antialiased;
+  background-color: #FFFCF8;
+  color: #000000;
+}
+
+::selection {
+  background-color: #7c3aed;
+  color: white;
+}
+
+/* ── WordPress content — nuclear reset ── */
+.wp-content,
+.wp-content * {
+  color: #000 !important;
+}
+
+.wp-content a,
+.wp-content a * {
+  color: #7c3aed !important;
+  text-decoration: underline;
+}
+
+/* Lists — cover every possible WP class combo */
+.wp-content ul,
+.wp-content ol,
+.wp-content ul.wp-block-list,
+.wp-content ol.wp-block-list,
+.wp-content .wp-block-list {
+  padding-left: 1.75rem !important;
+  margin: 0.75rem 0 !important;
+}
+
+.wp-content ul,
+.wp-content ul.wp-block-list {
+  list-style: disc outside !important;
+}
+
+.wp-content ol {
+  list-style: decimal outside !important;
+}
+
+/* WP uses ol for numbered sections but styled as bullets */
+.wp-content ol.wp-block-list {
+  list-style: disc outside !important;
+}
+
+.wp-content li,
+.wp-content li * {
+  display: list-item !important;
+  list-style-position: outside !important;
+  margin: 0.3rem 0 !important;
+}
+
+/* Headings */
+.wp-content h1 { font-size: 1.75rem; font-weight: 800; margin: 2rem 0 0.75rem; }
+.wp-content h2 { font-size: 1.4rem;  font-weight: 700; margin: 1.75rem 0 0.75rem; }
+.wp-content h3 { font-size: 1.15rem; font-weight: 700; margin: 1.5rem 0 0.5rem; }
+.wp-content h4 { font-size: 1rem;    font-weight: 700; margin: 1.25rem 0 0.5rem; }
+
+/* Paragraphs */
+.wp-content p {
+  line-height: 1.8 !important;
+  margin: 0.875rem 0 !important;
+}
+
+.wp-content strong,
+.wp-content b {
+  font-weight: 700 !important;
+}
+
+.wp-content blockquote {
+  border-left: 4px solid #e5e7eb !important;
+  padding-left: 1rem !important;
+  font-style: italic !important;
+  margin: 1.5rem 0 !important;
+}
+
+.wp-content figure {
+  margin: 1.5rem 0 !important;
+}
+
+.wp-content figure img {
+  border-radius: 0.75rem;
+  max-width: 100%;
+}
+
+.wp-content hr {
+  border: none;
+  border-top: 1px solid #e5e7eb;
+  margin: 2rem 0;
+}

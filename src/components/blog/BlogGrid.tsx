@@ -1,0 +1,14 @@
+import { BlogCard } from '@/components/blog/BlogCard';
+import { BlogPost } from '@/types/blog';
+
+interface BlogGridProps {
+  posts: BlogPost[];
+}
+
+export function BlogGrid({ posts }: BlogGridProps) {
+  return (
+    <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {posts.map((post) => (<BlogCard key={post.id} post={post} />))}
+    </div>
+  );
+}
