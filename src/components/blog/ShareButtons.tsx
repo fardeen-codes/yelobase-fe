@@ -5,7 +5,8 @@ interface ShareButtonsProps {
 }
 
 export function ShareButtons({ post }: ShareButtonsProps) {
-  const encodedUrl = encodeURIComponent(post.url);
+  const url = `https://yelobase.com/blogs/${post.slug}`;
+  const encodedUrl = encodeURIComponent(url);
   const encodedTitle = encodeURIComponent(post.title);
 
   return (

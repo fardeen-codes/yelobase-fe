@@ -8,7 +8,7 @@ export function BlogContent({ post }: BlogContentProps) {
   return (
     <article className="space-y-6 rounded-[2rem] border border-slate-800 bg-slate-900/80 p-8 shadow-xl">
       <div className="space-y-3">
-        <p className="text-brand-300 text-sm uppercase tracking-[0.24em]">{post.category}</p>
+        <p className="text-brand-300 text-sm uppercase tracking-[0.24em]">{post.categories?.[0]}</p>
         <h1 className="text-4xl font-semibold text-white">{post.title}</h1>
         <p className="text-sm text-slate-500">Published {post.date}</p>
       </div>

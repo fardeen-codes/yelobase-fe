@@ -45,8 +45,8 @@ export default function CTASection() {
                 Ready to build a system<br />that actually scales?
               </h2>
               <p className="max-w-md text-sm leading-relaxed text-gray-400">
-                Book a free Systems Audit. We'll look at your current setup, identify the
-                biggest gaps, and tell you exactly what we'd do — no obligation.
+                Book a free Systems Audit. We&apos;ll look at your current setup, identify the
+                biggest gaps, and tell you exactly what we&apos;d do — no obligation.
               </p>
             </div>
 

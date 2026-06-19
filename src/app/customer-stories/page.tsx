@@ -446,7 +446,7 @@ export default function CustomerStoriesPage() {
                 Ready to join our success stories?
               </h2>
               <p className="text-sm text-gray-500">
-                Let's discuss how we can help transform your business operations.
+                Let&apos;s discuss how we can help transform your business operations.
               </p>
             </div>
             <Link
