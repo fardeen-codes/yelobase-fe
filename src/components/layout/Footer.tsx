@@ -23,9 +23,9 @@
 
 // components/Footer.tsx
 
+import { Mail, MapPin,Phone } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { Mail, Phone, MapPin } from "lucide-react";
 
 const services = [
   "Zoho Automation",
@@ -47,7 +47,7 @@ export function Footer() {
     <footer className="bg-[#090911] text-white">
       <div className="container mx-auto px-6 pt-16">
         {/* Top Section */}
-        <div className="flex flex-col gap-12 lg:flex-row lg:justify-between lg:items-start">
+        <div className="flex flex-col gap-12 lg:flex-row lg:items-start lg:justify-between">
   {/* Left Side */}
   <div className="flex flex-col gap-12 sm:flex-row sm:gap-24 lg:gap-32">
     {/* Services */}
@@ -94,7 +94,7 @@ export function Footer() {
   {/* Right Side - Contact */}
   <div className="flex flex-col gap-8 lg:items-start">
     <div className="flex items-center gap-4">
-      <Mail className="h-6 w-6 text-neutral-400" />
+      <Mail className="size-6 text-neutral-400" />
 
       <a
         href="mailto:hello@yelobase.com"
@@ -105,7 +105,7 @@ export function Footer() {
     </div>
 
     <div className="flex items-center gap-4">
-      <Phone className="h-6 w-6 text-neutral-400" />
+      <Phone className="size-6 text-neutral-400" />
 
       <a
         href="tel:+919551714690"
@@ -116,7 +116,7 @@ export function Footer() {
     </div>
 
     <div className="flex items-center gap-4">
-      <MapPin className="h-6 w-6 text-neutral-400" />
+      <MapPin className="size-6 text-neutral-400" />
 
       <span className="text-[18px] text-neutral-100">
         USA, UK, UAE, India
@@ -126,7 +126,7 @@ export function Footer() {
 </div>
 
         {/* Bottom Card */}
-        <div className="mt-16 rounded-t-[20px] rounded-b-none bg-black px-8 py-8">
+        <div className="mt-16 rounded-b-none rounded-t-[20px] bg-black p-8">
           <div className="flex flex-col gap-8 lg:flex-row lg:items-center">
             {/* Logos */}
             <div className="flex flex-shrink-0 items-center gap-6">

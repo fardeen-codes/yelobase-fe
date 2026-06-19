@@ -1,8 +1,8 @@
 import CTASection from '@/components/home/CTASection';
 import { Hero } from '@/components/home/Hero';
 import { Results } from '@/components/home/Results';
-import { Services } from '@/components/home/Services';
 import { ResultsAndIdealClient } from '@/components/home/ResultsAndIdealClient';
+import { Services } from '@/components/home/Services';
 import { StoriesPreview } from '@/components/home/StoriesPreview';
 import WhyYelobase from '@/components/home/WhyYelobase';
 import ZohoPartnership from '@/components/home/ZohoPartnership';

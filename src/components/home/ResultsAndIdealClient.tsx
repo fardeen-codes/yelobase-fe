@@ -59,24 +59,24 @@ export function ResultsAndIdealClient() {
 
   return (
     <section className="w-full px-6 py-20 md:py-12" style={{ backgroundColor: "#fdf8f6" }}>
-      <div className="max-w-6xl mx-auto">
+      <div className="mx-auto max-w-6xl">
 
         {/* ── RESULTS SECTION ── */}
-        <div className="text-center mb-12">
-          <p className="text-xs font-semibold tracking-[0.2em] uppercase mb-3" style={{ color: "#4ecca3" }}>
+        <div className="mb-12 text-center">
+          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em]" style={{ color: "#4ecca3" }}>
             Proof
           </p>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
+          <h2 className="text-4xl font-bold text-gray-900 md:text-5xl">
             Results our clients talk about.
           </h2>
         </div>
 
         {/* 3 stat cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-24">
+        <div className="mb-24 grid grid-cols-1 gap-4 md:grid-cols-3">
           {stats.map((s, i) => (
             <div
               key={i}
-              className="relative rounded-2xl overflow-hidden flex flex-col items-start gap-8"
+              className="relative flex flex-col items-start gap-8 overflow-hidden rounded-2xl"
               style={{
                 backgroundColor: s.bg,
                 boxShadow:
@@ -94,7 +94,7 @@ export function ResultsAndIdealClient() {
               {/* Text top */}
               <div className="p-7 pb-4">
                 <p
-                  className="text-5xl font-bold mb-3"
+                  className="mb-3 text-5xl font-bold"
                   style={{ color: s.valueColor }}
                 >
                   {s.value}
@@ -108,18 +108,18 @@ export function ResultsAndIdealClient() {
               </div>
 
               {/* Image fills bottom */}
-              <div className="flex-1 mt-2">
+              <div className="mt-2 flex-1">
                 <img
                   src={s.image}
                   alt={s.value}
-                  className="w-full h-full object-contain object-bottom px-6 pb-6"
+                  className="size-full object-contain object-bottom px-6 pb-6"
                   style={{ maxHeight: 200 }}
                 />
 
                 {/* CTA button on dark card */}
                 {s.showButton && (
                   <div className="absolute bottom-6 left-7">
-                    <button className="bg-white text-gray-900 text-sm font-semibold px-5 py-2.5 rounded-full shadow hover:shadow-md transition-shadow">
+                    <button className="rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-gray-900 shadow transition-shadow hover:shadow-md">
                       Read Case Studies
                     </button>
                   </div>
@@ -130,20 +130,20 @@ export function ResultsAndIdealClient() {
         </div>
 
         {/* ── IDEAL CLIENT SECTION ── */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-start">
+        <div className="grid grid-cols-1 items-start gap-12 md:grid-cols-2 md:gap-16">
 
           {/* Left */}
           <div>
-            <p className="text-xs font-semibold tracking-[0.2em] uppercase mb-4" style={{ color: "#4ecca3" }}>
+            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em]" style={{ color: "#4ecca3" }}>
               Ideal Client
             </p>
-            <h2 className="text-4xl font-bold text-gray-900 mb-5">
+            <h2 className="mb-5 text-4xl font-bold text-gray-900">
               Who we work with
             </h2>
-            <p className="text-gray-500 text-base leading-relaxed mb-4">
+            <p className="mb-4 text-base leading-relaxed text-gray-500">
               YeloBase is built for businesses that are already operational — and ready to systematize.
             </p>
-            <p className="text-gray-500 text-base leading-relaxed">
+            <p className="text-base leading-relaxed text-gray-500">
               We work with founders, operations heads, and finance leads across professional services, trading, manufacturing, and SaaS companies — globally.
             </p>
           </div>
@@ -153,14 +153,14 @@ export function ResultsAndIdealClient() {
             {idealClients.map((c, i) => (
               <div
                 key={i}
-                className="rounded-xl p-5 bg-white"
+                className="rounded-xl bg-white p-5"
                 style={{
                   borderLeft: "3px solid #4ecca3",
                   boxShadow: "0 1px 4px rgba(0,0,0,0.05)",
                 }}
               >
-                <p className="font-bold text-gray-900 text-sm mb-1">{c.title}</p>
-                <p className="text-gray-500 text-sm leading-relaxed">{c.desc}</p>
+                <p className="mb-1 text-sm font-bold text-gray-900">{c.title}</p>
+                <p className="text-sm leading-relaxed text-gray-500">{c.desc}</p>
               </div>
             ))}
           </div>

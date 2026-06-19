@@ -59,7 +59,7 @@ export function Services() {
       }}
     >
       <div className="sticky top-12 flex min-h-screen items-center justify-center px-6">
-        <div className="relative w-full max-w-[1000px] h-[700px]">
+        <div className="relative h-[700px] w-full max-w-[1000px]">
           {/* WHITE CARD */}
           <div
             className="absolute left-1/2 top-0 -translate-x-1/2 rounded-[24px] bg-[#F4F4F3] shadow-2xl"
@@ -71,17 +71,17 @@ export function Services() {
             }}
           >
             <div className="p-12">
-              <p className="text-[#E05A4E] uppercase tracking-[0.3em] text-xs font-semibold mb-5">
+              <p className="mb-5 text-xs font-semibold uppercase tracking-[0.3em] text-[#E05A4E]">
                 Reality Check
               </p>
 
-              <h2 className="text-[36px] font-semibold leading-[1.05] text-[#111] mb-5">
+              <h2 className="mb-5 text-[36px] font-semibold leading-[1.05] text-[#111]">
                 Sounds like your
                 <br />
                 Monday?
               </h2>
 
-              <p className="text-[#555] text-lg mb-8">
+              <p className="mb-8 text-lg text-[#555]">
                 If this sounds familiar, your systems may be holding your growth
                 back.
               </p>
@@ -89,7 +89,7 @@ export function Services() {
               <ul className="space-y-5">
                 {problems.map((item, index) => (
                   <li key={index} className="flex gap-3">
-                    <span className="text-red-500 mt-[2px]">⊗</span>
+                    <span className="mt-[2px] text-red-500">⊗</span>
                     <span className="text-[#444]">{item}</span>
                   </li>
                 ))}
@@ -109,17 +109,17 @@ export function Services() {
             }}
           >
             <div className="p-14">
-              <p className="text-[#4ECCA3] uppercase tracking-[0.3em] text-xs font-semibold mb-5">
+              <p className="mb-5 text-xs font-semibold uppercase tracking-[0.3em] text-[#4ECCA3]">
                 Our Take
               </p>
 
-              <h2 className="text-[42px] font-semibold leading-[1.05] text-white mb-5">
+              <h2 className="mb-5 text-[42px] font-semibold leading-[1.05] text-white">
                 This isn’t a tool issue,
                 <br />
                 it’s a system issue.
               </h2>
 
-              <p className="text-[#9F9F9F] text-lg mb-8">
+              <p className="mb-8 text-lg text-[#9F9F9F]">
                 Most companies have the tools—what they lack is a system that
                 connects and scales. That’s where we come in.
               </p>
@@ -127,7 +127,7 @@ export function Services() {
               <ul className="space-y-5">
                 {solutions.map((item, index) => (
                   <li key={index} className="flex gap-3">
-                    <span className="text-green-400 mt-[2px]">✓</span>
+                    <span className="mt-[2px] text-green-400">✓</span>
                     <span className="text-[#D2D2D2]">{item}</span>
                   </li>
                 ))}

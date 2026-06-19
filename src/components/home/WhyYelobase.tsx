@@ -35,17 +35,17 @@ export default function WhyYelobase() {
 
   return (
     <section
-      className="w-full px-6 py-20 md:py-12 flex flex-col items-center"
+      className="flex w-full flex-col items-center px-6 py-20 md:py-12"
       style={{ backgroundColor: "#fde8e8" }}
     >
       {/* Header */}
-      <p className="text-xs font-semibold tracking-[0.2em] uppercase mb-4" style={{ color: "#4ecca3" }}>
+      <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em]" style={{ color: "#4ecca3" }}>
         Why Yelobase?
       </p>
-      <h2 className="text-4xl md:text-5xl font-bold text-gray-900 text-center leading-tight mb-4 max-w-2xl">
+      <h2 className="mb-4 max-w-2xl text-center text-4xl font-bold leading-tight text-gray-900 md:text-5xl">
         We&apos;re not your vendor. We&apos;re your technology partner
       </h2>
-      <p className="text-gray-500 text-base text-center mb-14">
+      <p className="mb-14 text-center text-base text-gray-500">
         There&apos;s a difference — and it matters more than you&apos;d think.
       </p>
 
@@ -56,18 +56,18 @@ export default function WhyYelobase() {
       >
         {/* Dark comparison table */}
         <div
-          className="rounded-2xl overflow-hidden w-full"
+          className="w-full overflow-hidden rounded-2xl"
           style={{ backgroundColor: "#2c2b29" }}
         >
           {/* Header row */}
-          <div className="grid grid-cols-3 px-8 py-5 border-b border-white/10">
-            <p className="text-white text-sm">
+          <div className="grid grid-cols-3 border-b border-white/10 px-8 py-5">
+            <p className="text-sm text-white">
               <span className="font-bold">Software</span>{" "}
-              <span className="text-gray-400 font-normal">vendor</span>
+              <span className="font-normal text-gray-400">vendor</span>
             </p>
-            <p className="text-white text-sm">
+            <p className="text-sm text-white">
               <span className="font-bold">Implementation</span>{" "}
-              <span className="text-gray-400 font-normal">Agency</span>
+              <span className="font-normal text-gray-400">Agency</span>
             </p>
             <p /> {/* covered by floating card */}
           </div>
@@ -81,8 +81,8 @@ export default function WhyYelobase() {
                 borderBottom: i < rows.length - 1 ? "1px solid rgba(255,255,255,0.07)" : "none",
               }}
             >
-              <p className="text-gray-300 text-sm">{row.vendor}</p>
-              <p className="text-gray-300 text-sm">{row.agency}</p>
+              <p className="text-sm text-gray-300">{row.vendor}</p>
+              <p className="text-sm text-gray-300">{row.agency}</p>
               <p />
             </div>
           ))}
@@ -90,7 +90,7 @@ export default function WhyYelobase() {
 
         {/* Floating Yelobase card — overflows top & bottom */}
         <div
-          className="absolute right-0 rounded-2xl overflow-hidden shadow-2xl"
+          className="absolute right-0 overflow-hidden rounded-2xl shadow-2xl"
           style={{
             width: "34%",
             top: 0,       // flush with padding top = OVERFLOW px above table
@@ -117,10 +117,10 @@ export default function WhyYelobase() {
               width={98}
               height={32}
               style={{width:"98px"}}
-              className="w-full max-w-md md:max-w-lg object-contain"
+              className="w-full max-w-md object-contain md:max-w-lg"
               priority
             />
-            <span className="text-white/70 text-sm font-normal ml-1">Partner</span>
+            <span className="ml-1 text-sm font-normal text-white/70">Partner</span>
           </div>
 
           {/* Dark rows — stretch to fill remaining space */}
@@ -145,7 +145,7 @@ export default function WhyYelobase() {
                 }}
               >
                 <BoltIcon />
-                <p className="text-white text-sm font-medium">{row.partner}</p>
+                <p className="text-sm font-medium text-white">{row.partner}</p>
               </div>
             ))}
           </div>
@@ -153,11 +153,11 @@ export default function WhyYelobase() {
       </div>
 
       {/* Quote */}
-      <div className="flex flex-col items-center mt-6 gap-1">
+      <div className="mt-6 flex flex-col items-center gap-1">
         <p className="text-base italic" style={{ color: "#9ca3af" }}>
           &ldquo;Leave the headache to us.&rdquo;
         </p>
-        <div className="w-32 h-0.5" style={{ backgroundColor: "#4ecca3" }} />
+        <div className="h-0.5 w-32" style={{ backgroundColor: "#4ecca3" }} />
       </div>
     </section>
   );

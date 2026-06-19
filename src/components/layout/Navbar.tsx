@@ -1,8 +1,8 @@
 'use client';
 
+import Image from "next/image";
 import Link from 'next/link';
 import { useState } from 'react';
-import Image from "next/image";
 
 import { routes } from '@/constants/routes';
 
@@ -33,7 +33,7 @@ export function Navbar() {
           </nav>
         </div>
         <div className="flex items-center gap-4">
-          <Link href={routes.contact} className="hover:bg-brand-400 inline-flex rounded-lg bg-black hover:bg-[#FF7070] px-5 py-3 text-sm font-semibold text-white transition">Book Free Audit</Link>
+          <Link href={routes.contact} className="hover:bg-brand-400 inline-flex rounded-lg bg-black px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#FF7070]">Book Free Audit</Link>
           <button type="button" onClick={() => setOpen(!open)} className="inline-flex size-10 items-center justify-center rounded-full border border-slate-800 text-slate-300 hover:border-slate-700 hover:text-white md:hidden">☰</button>
         </div>
       </div>

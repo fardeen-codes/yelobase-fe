@@ -15,10 +15,10 @@ const companies = [
 export function Hero() {
   return (
     <section className="overflow-hidden">
-      <div className="mx-auto px-6 py-6">
+      <div className="mx-auto p-6">
         {/* Content */}
         <div className="mx-auto max-w-5xl text-center">
-          <p className="font-mono text-3xl md:text-5xl tracking-tight text-black">
+          <p className="font-mono text-3xl tracking-tight text-black md:text-5xl">
             Your Business Systems.
           </p>
 
@@ -26,7 +26,7 @@ export function Hero() {
             Properly Built and Owned.
           </h1>
 
-          <p className="text-[18px] font-normal text-[#3A3A3A] leading-6 tracking-normal text-center">
+          <p className="text-center text-[18px] font-normal leading-6 tracking-normal text-[#3A3A3A]">
             We are a technology partner for growing businesses. Starting
             with Zoho and expanding across your entire <br />stack — we design,
             build, automate, and manage the systems that let you scale

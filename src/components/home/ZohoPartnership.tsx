@@ -44,33 +44,33 @@ export default function ZohoPartnership() {
       className="w-full px-6 py-20 md:py-12"
       style={{ backgroundColor: "#fdf8f6" }}
     >
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
+      <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 md:grid-cols-2 md:gap-16">
 
         {/* Left */}
         <div>
-          <p className="text-xs font-semibold tracking-[0.2em] uppercase mb-4" style={{ color: "#4ecca3" }}>
+          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em]" style={{ color: "#4ecca3" }}>
             Zoho Partnership
           </p>
-          <h2 className="text-[42px] md:text-[42px] font-semibold text-gray-900 leading-tight mb-5">
+          <h2 className="mb-5 text-[42px] font-semibold leading-tight text-gray-900 md:text-[42px]">
             We are an Official Zoho Partner. That&apos;s not a badge, it&apos;s a foundation.
           </h2>
-          <p className="text-gray-500 text-base leading-relaxed mb-8 max-w-lg">
+          <p className="mb-8 max-w-lg text-base leading-relaxed text-gray-500">
             Our founders built their careers inside the Zoho ecosystem. We know it at the
             level of architecture, not just administration. That depth is what separates a
             system that works from one that just looks like it does.
           </p>
 
           {/* Feature list */}
-          <ul className="space-y-6 mb-10">
+          <ul className="mb-10 space-y-6">
             {features.map((f, i) => (
               <li key={i} className="flex items-start gap-4">
                 <span className="mt-0.5 shrink-0 text-gray-400">{f.icon}</span>
-                <p className="text-gray-600 text-sm leading-relaxed">{f.text}</p>
+                <p className="text-sm leading-relaxed text-gray-600">{f.text}</p>
               </li>
             ))}
           </ul>
 
-          <p className="text-gray-500 text-base leading-relaxed max-w-lg">
+          <p className="max-w-lg text-base leading-relaxed text-gray-500">
             Zoho is where we start. As your business grows, we grow the architecture
             with it — adding integrations, third-party tools, and AI layers as you need them.
           </p>
@@ -83,7 +83,7 @@ export default function ZohoPartnership() {
             alt="Zoho and Yelobase partnership illustration"
             width={520}
             height={480}
-            className="w-full max-w-md md:max-w-lg object-contain"
+            className="w-full max-w-md object-contain md:max-w-lg"
             priority
           />
         </div>

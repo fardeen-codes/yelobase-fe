@@ -1,4 +1,4 @@
-import { WPPost, WPCategory, WPAuthor, WPMedia, BlogPost } from "@/types/blog";
+import { BlogPost,WPAuthor, WPCategory, WPMedia, WPPost } from "@/types/blog";
 
 const WP_BASE = "https://saddlebrown-gazelle-792645.hostingersite.com/wp-json/wp/v2";
 

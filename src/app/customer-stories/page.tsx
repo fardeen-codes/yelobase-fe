@@ -220,10 +220,11 @@
 
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { testimonials, stats } from "@/data/testimonials";
+import { useState } from "react";
+
+import { stats,testimonials } from "@/data/testimonials";
 import { Testimonial } from "@/types/testimonial";
 
 // ── Filter categories ──────────────────────────────────────────────────────
@@ -261,19 +262,19 @@ function StarRating({ rating }: { rating: number }) {
 
 function TestimonialCard({ t }: { t: Testimonial }) {
   return (
-    <div className="bg-white rounded-2xl p-6 flex flex-col justify-between gap-6"
+    <div className="flex flex-col justify-between gap-6 rounded-2xl bg-white p-6"
       style={{ boxShadow: "0 1px 4px rgba(0,0,0,0.06)" }}>
-      <p className="text-gray-600 text-sm leading-relaxed">{t.quote}</p>
+      <p className="text-sm leading-relaxed text-gray-600">{t.quote}</p>
       <div>
         <StarRating rating={t.rating} />
-        <div className="flex items-center gap-3 mt-4">
-          <div className="relative w-11 h-11 rounded-full overflow-hidden shrink-0">
+        <div className="mt-4 flex items-center gap-3">
+          <div className="relative size-11 shrink-0 overflow-hidden rounded-full">
             <Image src={t.avatar} alt={t.name} fill className="object-cover" />
           </div>
           <div>
-            <p className="text-gray-900 font-bold text-sm">{t.name}</p>
-            <p className="text-gray-400 text-xs">{t.company}</p>
-            <p className="text-gray-400 text-xs">{t.location}</p>
+            <p className="text-sm font-bold text-gray-900">{t.name}</p>
+            <p className="text-xs text-gray-400">{t.company}</p>
+            <p className="text-xs text-gray-400">{t.location}</p>
           </div>
         </div>
       </div>
@@ -283,24 +284,24 @@ function TestimonialCard({ t }: { t: Testimonial }) {
 
 function FeaturedCard({ t }: { t: Testimonial }) {
   return (
-    <div className="rounded-2xl p-8 flex flex-col justify-between row-span-2"
+    <div className="row-span-2 flex flex-col justify-between rounded-2xl p-8"
       style={{ backgroundColor: "#1f1e1c", minHeight: 420 }}>
       <div>
         <svg width="32" height="28" viewBox="0 0 36 30" fill="#4b5563">
           <path d="M0 30V18C0 8.4 5.4 2.4 16.2 0l2.4 3.6C13.2 5.4 10.2 8.4 9.6 13.2H16.2V30H0zm19.8 0V18C19.8 8.4 25.2 2.4 36 0l2.4 3.6C33 5.4 30 8.4 29.4 13.2H36V30H19.8z" />
         </svg>
-        <p className="text-gray-200 text-sm leading-relaxed mt-5">{t.quote}</p>
+        <p className="mt-5 text-sm leading-relaxed text-gray-200">{t.quote}</p>
       </div>
       <div>
         <StarRating rating={t.rating} />
-        <div className="flex items-center gap-3 mt-4">
-          <div className="relative w-12 h-12 rounded-full overflow-hidden shrink-0">
+        <div className="mt-4 flex items-center gap-3">
+          <div className="relative size-12 shrink-0 overflow-hidden rounded-full">
             <Image src={t.avatar} alt={t.name} fill className="object-cover" />
           </div>
           <div>
-            <p className="text-white font-bold text-sm">{t.name}</p>
-            <p className="text-gray-400 text-xs">{t.company}</p>
-            <p className="text-gray-400 text-xs">{t.location}</p>
+            <p className="text-sm font-bold text-white">{t.name}</p>
+            <p className="text-xs text-gray-400">{t.company}</p>
+            <p className="text-xs text-gray-400">{t.location}</p>
           </div>
         </div>
       </div>
@@ -332,26 +333,26 @@ export default function CustomerStoriesPage() {
     <main className="w-full" style={{ backgroundColor: "#FFFCF8" }}>
 
       {/* ── HERO ── */}
-      <section className="text-center px-6 pt-20 pb-10 max-w-3xl mx-auto">
-        <p className="text-xs font-semibold tracking-[0.2em] uppercase mb-3" style={{ color: "#4ecca3" }}>
+      <section className="mx-auto max-w-3xl px-6 pb-10 pt-20 text-center">
+        <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em]" style={{ color: "#4ecca3" }}>
           Wall of Love
         </p>
-        <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-4">
+        <h1 className="mb-4 text-5xl font-bold text-gray-900 md:text-6xl">
           Customer Stories
         </h1>
-        <p className="text-gray-500 text-base">
+        <p className="text-base text-gray-500">
           Every review is real. Every project delivered. Every client gets our best.
         </p>
       </section>
 
       {/* ── STATS BAR ── */}
-      <section className="px-6 pb-10 max-w-[62.5rem] mx-auto">
-        <div className="rounded-2xl px-8 py-5 grid grid-cols-4 gap-4 items-center"
+      <section className="mx-auto max-w-[62.5rem] px-6 pb-10">
+        <div className="grid grid-cols-4 items-center gap-4 rounded-2xl px-8 py-5"
           style={{ backgroundColor: "#FAEBEB" }}>
           {stats.map((s) => (
             <div key={s.label} className="text-center">
               <p className="text-2xl font-bold text-gray-900">
-                {s.value} <span className="text-gray-500 text-sm font-normal">{s.sublabel}</span>
+                {s.value} <span className="text-sm font-normal text-gray-500">{s.sublabel}</span>
               </p>
             </div>
           ))}
@@ -359,12 +360,12 @@ export default function CustomerStoriesPage() {
       </section>
 
       {/* ── LOGO MARQUEE ── */}
-      <section className="py-4 mb-10">
-        <div className="w-full max-w-[1200px] mx-auto px-4">
-          <div className="flex justify-between items-center gap-8">
+      <section className="mb-10 py-4">
+        <div className="mx-auto w-full max-w-[1200px] px-4">
+          <div className="flex items-center justify-between gap-8">
             {LOGOS.map((l, i) => (
               <div key={i} className="relative h-8 w-24 shrink-0">
-                <Image src={l.src} alt={l.alt} fill className="object-contain grayscale opacity-60" />
+                <Image src={l.src} alt={l.alt} fill className="object-contain opacity-60 grayscale" />
               </div>
             ))}
           </div>
@@ -373,7 +374,7 @@ export default function CustomerStoriesPage() {
 
 
       {/* ── FILTER TABS ── */}
-      <section className="flex justify-center px-6 mb-10">
+      <section className="mb-10 flex justify-center px-6">
         <div className="inline-flex overflow-hidden rounded-[8px] border border-[#D1D5DB] bg-white shadow-sm">
           {FILTERS.map((filter, index) => {
             const isHovered = hoveredFilter === filter;
@@ -410,8 +411,8 @@ export default function CustomerStoriesPage() {
       </section>
 
       {/* ── TESTIMONIALS GRID ── */}
-      <section className="px-6 max-w-6xl mx-auto mb-20">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <section className="mx-auto mb-20 max-w-6xl px-6">
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
           {/* Featured dark card — spans 2 rows */}
           <FeaturedCard t={featured} />
 
@@ -423,34 +424,34 @@ export default function CustomerStoriesPage() {
       </section>
 
       {/* ── BOTTOM CTA ── */}
-      <section className="px-6 pb-20 max-w-6xl mx-auto">
-        <div className="relative rounded-2xl px-10 md:px-16 py-14" style={{ backgroundColor: "#e8e4df" }}>
+      <section className="mx-auto max-w-6xl px-6 pb-20">
+        <div className="relative rounded-2xl px-10 py-14 md:px-16" style={{ backgroundColor: "#e8e4df" }}>
 
           {/* Chalk decoration top-left */}
-          <div className="absolute -top-5 left-10 w-14 h-14 pointer-events-none">
+          <div className="pointer-events-none absolute -top-5 left-10 size-14">
             <Image src="/images/logos/cta-img-2.svg" alt="" fill className="object-contain" />
           </div>
           {/* Coin decoration bottom-right */}
-          <div className="absolute -bottom-5 right-10 w-12 h-12 pointer-events-none">
+          <div className="pointer-events-none absolute -bottom-5 right-10 size-12">
             <Image src="/images/logos/cta-img-1.svg" alt="" fill className="object-contain" />
           </div>
 
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
+          <div className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
             <div className="max-w-lg">
-              <p className="text-xs font-semibold tracking-[0.2em] uppercase mb-3" style={{ color: "#4ecca3" }}>
+              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em]" style={{ color: "#4ecca3" }}>
                 Start Your Project Today
               </p>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight mb-3"
+              <h2 className="mb-3 text-3xl font-bold leading-tight text-gray-900 md:text-4xl"
                 style={{ fontFamily: "monospace" }}>
                 Ready to join our success stories?
               </h2>
-              <p className="text-gray-500 text-sm">
+              <p className="text-sm text-gray-500">
                 Let's discuss how we can help transform your business operations.
               </p>
             </div>
             <Link
               href="/contact"
-              className="shrink-0 inline-flex items-center gap-2 font-semibold text-white px-7 py-3.5 rounded-xl text-sm hover:opacity-90 transition-opacity"
+              className="inline-flex shrink-0 items-center gap-2 rounded-xl px-7 py-3.5 text-sm font-semibold text-white transition-opacity hover:opacity-90"
               style={{ backgroundColor: "#f07272" }}
             >
               Get started

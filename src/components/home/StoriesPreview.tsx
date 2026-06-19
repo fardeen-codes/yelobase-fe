@@ -28,7 +28,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { testimonials, stats } from "@/data/testimonials";
+
+import { stats,testimonials } from "@/data/testimonials";
 import { Testimonial } from "@/types/testimonial";
 
 // Sort by date descending, latest = featured dark card
@@ -60,7 +61,7 @@ function StarRating({ rating }: { rating: number }) {
 
 function Avatar({ src, name }: { src: string; name: string }) {
   return (
-    <div className="relative w-14 h-14 overflow-hidden shrink-0 border-white/20">
+    <div className="relative size-14 shrink-0 overflow-hidden border-white/20">
       <Image src={src} alt={name} fill className="object-cover" />
     </div>
   );
@@ -69,24 +70,24 @@ function Avatar({ src, name }: { src: string; name: string }) {
 export function StoriesPreview() {
   return (
     <section className="w-full px-6 py-20 md:py-12" style={{ backgroundColor: "#fdf8f6" }}>
-      <div className="max-w-6xl mx-auto">
+      <div className="mx-auto max-w-6xl">
 
         {/* Header */}
-        <div className="text-center mb-12">
-          <p className="text-xs font-semibold tracking-[0.2em] uppercase mb-3" style={{ color: "#4ecca3" }}>
+        <div className="mb-12 text-center">
+          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em]" style={{ color: "#4ecca3" }}>
             Real Feedbacks
           </p>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
+          <h2 className="text-4xl font-bold text-gray-900 md:text-5xl">
             Explore customer stories
           </h2>
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
+        <div className="mb-10 grid grid-cols-1 gap-4 md:grid-cols-3">
 
           {/* Featured dark card — col 1, spans 2 rows */}
           <div
-            className="rounded-2xl p-8 flex flex-col justify-between md:row-span-2"
+            className="flex flex-col justify-between rounded-2xl p-8 md:row-span-2"
             style={{ backgroundColor: "#1f1e1c", minHeight: 420 }}
           >
             {/* Quote mark */}
@@ -94,7 +95,7 @@ export function StoriesPreview() {
               <svg width="36" height="30" viewBox="0 0 36 30" fill="#4b5563">
                 <path d="M0 30V18C0 8.4 5.4 2.4 16.2 0l2.4 3.6C13.2 5.4 10.2 8.4 9.6 13.2H16.2V30H0zm19.8 0V18C19.8 8.4 25.2 2.4 36 0l2.4 3.6C33 5.4 30 8.4 29.4 13.2H36V30H19.8z"/>
               </svg>
-              <p className="text-gray-200 text-base leading-relaxed mt-6">
+              <p className="mt-6 text-base leading-relaxed text-gray-200">
                 {featured.quote}
               </p>
             </div>
@@ -102,12 +103,12 @@ export function StoriesPreview() {
             {/* Rating + author */}
             <div>
               <StarRating rating={featured.rating} />
-              <div className="flex items-center gap-4 mt-5">
+              <div className="mt-5 flex items-center gap-4">
                 <Avatar src={featured.avatar} name={featured.name} />
                 <div>
-                  <p className="text-white font-bold text-sm">{featured.name}</p>
-                  <p className="text-gray-400 text-xs">{featured.company}</p>
-                  <p className="text-gray-500 text-xs">{featured.location}</p>
+                  <p className="text-sm font-bold text-white">{featured.name}</p>
+                  <p className="text-xs text-gray-400">{featured.company}</p>
+                  <p className="text-xs text-gray-500">{featured.location}</p>
                 </div>
               </div>
             </div>
@@ -115,12 +116,12 @@ export function StoriesPreview() {
 
           {/* Stats card — col 2-3, row 1 */}
           <div
-            className="md:col-span-2 rounded-2xl p-8 bg-white grid grid-cols-4 gap-4 items-center"
+            className="grid grid-cols-4 items-center gap-4 rounded-2xl bg-white p-8 md:col-span-2"
             style={{ boxShadow: "0 1px 4px rgba(0,0,0,0.06)" }}
           >
             {stats.map((s) => (
               <div key={s.label} className="flex flex-col gap-1">
-                <p className="text-[10px] font-semibold tracking-widest text-gray-400 uppercase">
+                <p className="text-[10px] font-semibold uppercase tracking-widest text-gray-400">
                   {s.label}
                 </p>
                 <p className="text-3xl font-bold text-gray-900">{s.value}</p>
@@ -133,21 +134,21 @@ export function StoriesPreview() {
           {rest.map((t) => (
             <div
               key={t.id}
-              className="rounded-2xl p-7 bg-white flex flex-col justify-between"
+              className="flex flex-col justify-between rounded-2xl bg-white p-7"
               style={{
                 boxShadow: "0 1px 4px rgba(0,0,0,0.06)",
                 minHeight: 220,
               }}
             >
-              <p className="text-gray-600 text-sm leading-relaxed">{t.quote}</p>
+              <p className="text-sm leading-relaxed text-gray-600">{t.quote}</p>
               <div>
                 <StarRating rating={t.rating} />
-                <div className="flex items-center gap-3 mt-4">
+                <div className="mt-4 flex items-center gap-3">
                   <Avatar src={t.avatar} name={t.name} />
                   <div>
-                    <p className="text-gray-900 font-bold text-sm">{t.name}</p>
-                    <p className="text-gray-400 text-xs">{t.company}</p>
-                    <p className="text-gray-400 text-xs">{t.location}</p>
+                    <p className="text-sm font-bold text-gray-900">{t.name}</p>
+                    <p className="text-xs text-gray-400">{t.company}</p>
+                    <p className="text-xs text-gray-400">{t.location}</p>
                   </div>
                 </div>
               </div>
@@ -159,7 +160,7 @@ export function StoriesPreview() {
         <div className="flex justify-center">
           <Link
             href="/customer-stories"
-            className="flex items-center gap-2 border border-gray-400 text-gray-800 font-medium text-sm py-2.5 px-[18px] rounded-lg hover:bg-gray-50 transition-colors"
+            className="flex items-center gap-2 rounded-lg border border-gray-400 px-[18px] py-2.5 text-sm font-medium text-gray-800 transition-colors hover:bg-gray-50"
           >
             View All Success Stories
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

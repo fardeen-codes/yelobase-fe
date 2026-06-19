@@ -99,17 +99,17 @@ export function Results() {
       `}</style>
 
       <section className="w-full px-6 py-20 md:py-24" style={{ backgroundColor: "#fdf8f6" }}>
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
+        <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 md:grid-cols-2 md:gap-16">
 
           {/* Left */}
           <div className="md:pr-8">
-            <p className="text-xs font-semibold tracking-[0.2em] uppercase mb-4" style={{ color: "#4ecca3" }}>
+            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em]" style={{ color: "#4ecca3" }}>
               What We Do
             </p>
-            <h2 className="text-[42px] font-semibold text-gray-900 leading-[1.1] mb-6">
+            <h2 className="mb-6 text-[42px] font-semibold leading-[1.1] text-gray-900">
               We build and manage your business operating system.
             </h2>
-            <p className="text-gray-500 text-base leading-relaxed max-w-md">
+            <p className="max-w-md text-base leading-relaxed text-gray-500">
               Most Zoho partners implement and disappear. We don&apos;t. We become your
               technology arm — designing your systems, automating your operations,
               and staying on as the team that keeps everything running.
@@ -132,7 +132,7 @@ export function Results() {
                       {/* Title split into 2 lines */}
                       <div className="mb-1">
                         {s.title.map((line, j) => (
-                          <p key={j} className="font-bold text-gray-900 text-[15px] leading-snug">
+                          <p key={j} className="text-[15px] font-bold leading-snug text-gray-900">
                             {line}
                           </p>
                         ))}
